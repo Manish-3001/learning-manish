@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deprecated example</title>
+</head>
+
+<body>
+    <script>
+        //first type of creating array
+        //let arr= new Array();
+        //second type of creating array
+        let arr=["everst","fuji","nanga parbat"];
+        //to access the elements of array
+        console.log(arr[0]);
+        console.log(arr[1]);
+        console.log(arr[2]);
+        //change the value of an element
+        arr[1]="K2";
+        console.log(arr);
+        // geting the array size
+        console.log(arr.length);
+        //basic operations on arrays
+        //adding elements in end of an array
+        let seas=["Black sea","caribbian sea","north sea","Baltic sea"];
+        seas.push('red sea');
+        console.log(seas);
+        //adding an element in the begining of array
+        seas.unshift('caspian sea')
+        console.log(seas);
+        //removing an element from the array
+        const lastElement=seas.pop();
+        console.log(lastElement);
+        // removing element from first
+        const firstElement=seas.shift();
+        console.log(firstElement);
+        //finding the index
+        let index=seas.indexOf("north sea");
+        console.log(index);
+        //check value is an array
+        console.log(Array.isArray(seas));
+
+    </script>
+</body>
+</html>

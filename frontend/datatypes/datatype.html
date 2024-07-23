@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Deprecated example</title>
+</head>
+
+<body>
+    <script>
+        let num=42;
+        console.log(num);
+        let str="hello world"
+        console.log(str);
+        let isTrue = true;
+        console.log(isTrue);
+        let value;
+        console.log(value);
+        let nullVal = null;
+        console.log(nullVal);
+        let bigIntNum = 9007199254740991n;
+        console.log(bigIntNum);
+        const sym = Symbol('foo');
+        console.log(sym);
+        // object
+        let obj={
+            name:"manish",
+            age:21
+        }
+        console.log(obj)
+        // array
+        let arr=['manish',21];
+        console.log(arr)
+        // function
+        function greet(name) {
+        return `Hello, ${name}!`;
+        }
+        console.log(greet("manish")); 
+        //Case Study 1: Number Data Type
+        let price=23;
+        let price2=34;
+        let totalPrice = price+ price2;
+        console.log("totalPrice"+totalPrice)
+        //Case Study 2: String Data Type
+        let email = "example@example.com";
+        let isValidEmail= email.includes("@")
+        console.log("Is Valid Email:", isValidEmail);
+        //Case Study 3: Object Data Type
+        let task={
+            id : 1,
+            title: "Complete Project",
+            priority: "High",
+            deadline: "2024-02-15"
+        }
+        console.log("task", task)
+        //Case Study 4: Array Data Type
+        let weather = ['sunny','winter',"rainy"]
+        console.log('weather',weather);
+        //Case Study 5: Function Data Type
+        function add(a,b){
+            return a+b;
+            let result=add(5,3);
+            console.log('add',result);
+            
+        }
+        //null datatype
+        let mytype='null';
+        console.log(mytype);
+        //case study
+        let feedback= null;
+        if(feedback === null){
+            console.log("No feedback submitted yet.");
+            } 
+            else {
+            console.log("Feedback:", feedback);
+        }
+        //undefined
+        let myName;
+        console.log(myName);
+        //case study
+        let currentUser;
+        function NotloggedIN(){
+            currentUser= undefined;
+            if (currentUser === undefined) {
+                console.log("No user logged in.");
+                }
+                else {
+                    console.log("Logged in user:", currentUser);
+                }
+            }
+        
+               
+
+    </script>
+</body>
+</html>

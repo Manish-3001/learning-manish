@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-CSS-Float</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            word-wrap: wrap;
+        }
+        .container{
+            display: block;
+            max-width: 80vw;
+            margin: auto;
+            border: 2px dotted black;
+        }
+        body{
+            background-image: url(background_page.png);
+            background-repeat: repeat-x;
+        }
+        .main {
+            border: 2px solid #585858;
+            float: right;
+            width: 700px;
+            margin-right: 15px;
+            padding-top: 5px;
+        }
+        .menu {
+            float:left;
+            max-width:200px;
+            border: 2px solid #585858;
+            /* margin-left: 20px; */
+        }
+        img{
+            width: 100%;
+            height: 200px;
+        }
+        .copyright {
+            margin: 1rem 0rem;
+            text-align: center;
+            clear: both;
+        }
+        h2{
+            text-align: center;
+            margin: 1rem 0rem;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            /* padding: 1rem 0rem; */
+        }
+        
+       .inner-one{
+        border: 2px solid black;
+        float: left;
+        width: 20%;
+        padding-left: 2.5rem;
+       }
+       .outer{
+        padding: 2rem;
+       }
+       h1{
+        padding-top: 1rem;
+        padding-right: 0.5rem;
+        word-wrap: wrap;
+        font-size: large;
+       }
+       .inner-two{
+        border: 2px solid black;
+        /* margin: 1rem 0rem; */
+        float: right;
+        width: 74%;
+       }
+
+       p{
+        margin-left: 1rem;
+        margin-bottom: 1.5rem;
+       }
+       .copyr{
+        padding: 2rem;
+       }
+       .container{
+        margin-bottom: 2rem ;
+        /* margin-top: 0.4rem; */
+       }
+       .clearfix:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+            @media(max-width:580px){
+				.inner-two,.inner-one{
+					float:none;
+					border-color:greenyellow;
+					width:100%;
+                    background-color:white;
+                    margin:2px;
+				}
+
+			}
+            @media(min-width:581px) and (max-width:768px){
+				.inner-two,.inner-one{
+					float:none;
+					border-color:  darkmagenta;
+					width:100%;
+                    background-color: antiquewhite;
+                    margin:5px;
+                    
+
+			}
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+        <img  src= "banner.jpg"/>
+        <h2> A simple layout using css and html</h2>
+        </div>
+        <div class="outer">
+            <div class="inner-one">
+                <h1>Side Menu</h1>
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Recent News</li>
+                    <li>Brief History</li>
+                    <li>Team Details</li>
+                </ul> 
+            </div>
+            <div class="inner-two">
+                <h2>About CSS</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim asperiores minus qui sunt!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni deleniti tempore eum aut quae blanditiis dignissimos corporis reiciendis voluptatum. A aliquam nihil numquam corporis adipisci?</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos debitis recusandae molestiae temporibus fuga, cum, harum magni neque, ratione illum laudantium fugit eum dolore illo repellat voluptatibus cumque reiciendis dolorum!</p>
+                <p class="last">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p class="copyr">Copyright 2010, Somecompny</p>
+            </div>
+        </div>
+</body>
+</html>
+
+         

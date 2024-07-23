@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deprecated example</title>
+</head>
+
+<body>
+    <script>
+        //for loop
+         const numbers=[1,2,3,4,5];
+        // for(i=0;i,numbers.length;i++){
+        //     console.log(numbers[i]);
+        // }
+        //for each
+        numbers.forEach(function(number){
+            console.log(number);
+        });
+        //index parameters
+        numbers.forEach((number,index)=>{
+            console.log("index:"+index+"value:"+number);
+
+        });
+        //array
+        numbers.forEach((number,index,array)=>{
+            console.log(array);
+        });
+        //creating array of objects
+        let cars=[{
+            "color":"purple",
+            "type":"minivan",
+            "registration":new Date('2017-01-03'),
+            "capacity":7
+        },{
+            "color":"red",
+            "type":"station wagon",
+            "registration":new Date('2018-01-03'),
+            "capacity":5
+
+        },{
+            "color":"green",
+            "type":"sedan",
+            "registration":new Date('2019-01-03'),
+            "capacity":5
+        }];
+        console.log(cars);
+        //add object in first position
+        let car={
+            "color":"red",
+            "type":"cabrio",
+            "registration":new Date('2019-01-03'),
+            "capacity":5
+
+        }
+        cars.unshift(car);
+        //to add an object at lat positon
+        let car1={
+            "color":"red",
+            "type":"cabrio",
+            "registration":new Date('2012-01-03'),
+            "capacity":5
+
+        }
+        cars.push(car1);
+        //add new object in the middle
+        let car2={
+            "color":"white",
+            "type":"offroad",
+            "registration":new Date('2022-01-03'),
+            "capacity":5
+
+        }
+        cars.splice(2,0,car2);
+        //array.find
+        let car3= cars.find(car3 => car3.color ==="red");
+        console.log(car3)
+        //search with multiple values
+        let car4= cars.find(car4=> car4.color ==="red"&& car4.type ==="cabrio");
+        console.log(car4);
+        //array filter
+        let redCar= cars.filter(redCar=> redCar.color==="red");
+        console.log(redCar);
+        //mapping
+        let sizes = cars.map(sizes=>{
+            if (sizes.capacity <= 3){
+                return "small";
+            }
+            if (sizes.capacity <= 5){
+                return "medium";
+            }
+        return "large";
+        });
+        console.log(sizes);
+        //create new obect if we need mre values
+        let carsProperties = cars.map(carsProperties =>{
+            let properties={
+                "capacity":carsProperties.capacity,
+                "size":"large"
+            };
+            if(carsProperties.capacity<=5){
+                properties['size']="medium";
+            }
+            if(carsProperties.capacity<=3){
+                properties['size']="small";
+            }
+            return properties;
+        });
+        console.log(carsProperties);
+        //sorting 
+        let sortCars= cars.sort((c1,c2) => (c1.capacity <c2.capacity) ? 1:
+        (c1.capacity > c2.capacity)? -1 :0);
+        console.log(sortCars);
+
+
+    </script>
+</body>
+</html>

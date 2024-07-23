@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>closures</title>
+</head>
+
+<body>
+<script>
+    function Hero(name,planet){
+        this.name=name;
+        this.planet=planet;
+        this.sayName= function(){
+            alert(this.name);
+        }
+        //private property
+        let password="haha";
+        function privateFunction(){
+            alert("i am a secret agent");
+        }
+        this.showPassword= function(){
+            alert(password);
+        }
+        this.runPrivateFunction=function(){
+            privateFunction();
+        }
+        return name+planet;
+        
+        
+    }
+    let returnvalue= Hero("spiderMAn","Earth");
+    alert(returnvalue);
+    var obOne=new Hero("spiderman","earth");
+    alert(obOne.password);
+    obOne.showPassword();
+    obOne.runPrivateFunction();
+    var obTwo=new Hero("ironman","earth");
+    obOne.sayName();
+    obTwo.sayName();
+
+    
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deprecated example</title>
+</head>
+
+<body>
+    <input type="text" name="training_location"/>
+    <button oncick="storeTrainingLocation()">store training loctaion</button>
+    <button onclick="showLocation()">show location</button>
+    <script>
+        function storeTrainingLocation(){
+            let inputOb=document.querySelector("input");
+            let trainingLocation= inputOb.value;
+            sessionStorage.setItem("training_location",trainingLocation);
+            alert("training location stored");
+        }
+        function showLocation(){
+            let trainingLocationOb= sessionStorage.getItem("training_location");
+            alert(trainingLocationOb);
+        }
+        
+    </script>
+    </body>
+    </html>

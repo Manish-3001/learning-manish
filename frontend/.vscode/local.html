@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deprecated example</title>
+</head>
+
+<body>
+    <input type="text" name="student"/>
+    <button onclick="addStudent()">add students</button>
+    <button onclick="showStudents()">show student</button>
+    <button onclick="RemoveStudents()">Remove all the students</button>
+    <script>
+        let students=["manish","rohi","nikhil"];
+        function addStudent(){
+            let inputOb=document.querySelector("input");
+            let studentvalues= inputOb.value;
+            students.push(studentvalues);
+            localstorage.setItem('rahul',JSON.stingify(students));
+            localStorage= setItem("student",studentvalues);
+            console.log("student added",studentvalue)
+
+
+        }
+        function showStudents(){
+            let students =localstorage.getItem("students");
+
+        }
+        function removeStudents(){
+            let students =localstorage.removeItem("students");
+        }
+
+    </script>
+</body>
+</html>

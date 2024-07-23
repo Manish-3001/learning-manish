@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>closures</title>
+</head>
+
+<body>
+<script>
+    function TicketGenerator(transportMode){
+        var generateTicket= function(destination){
+            return transportMode+"--"+destination+"123";
+
+        }
+        return generateTicket;
+    }
+    var flightTicketgenerator= TicketGenerator('flight');
+    var shipTicketgenerator= TicketGenerator('ship');
+    alert(flightTicketgenerator("chennai"));
+    alert(shipTicketgenerator('singapore'));
+    
+    
+
+</script>
+
+    </body>
+    </html>

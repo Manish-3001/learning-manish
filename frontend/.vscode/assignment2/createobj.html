@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>closures</title>
+</head>
+
+<body>
+<script>
+    //object literal
+        let Ob={
+            name:"anil",
+            location:'wadi'
+        }
+        // u can inherit from an obeject
+        let studentOb= Object.create(Ob);
+        studentOb.course= "full satck";
+        studentOb.showCompany= function(){
+            alert("its ascendion");
+        }
+        alert(studentOb.location);
+        studentOb.showCompany();
+
+
+    </script>
+    </body>
+    </html>

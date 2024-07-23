@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deprecated example</title>
+</head>
+<script>
+    //this with function invocation
+    function doSomething(a, b) {
+
+        this.propone = "test value";
+    }
+    
+    doSomething();
+    document.write(window.propone);
+    //
+    function doSomething() {
+    
+    'use strict';
+    
+    document.write(this + '<br>')
+    function innerFunction() {
+    
+    document.write(this)
+    }
+    innerFunction();
+    }
+    doSomething();
+
+    //this with method invocation
+    let person = {
+    name : "John",
+    age : 31,
+    logInfo : function() {
+        document.write(this.name + " is " + this.age + " years old");
+        }
+    }
+    person.logInfo()
+    //
+    let add = {
+        num : 0,
+        calc : function() {
+        
+            document.write(this + ' ')
+            this.num
+            += 1;
+            return this.num;
+            }
+        };
+        
+        document.write(add.calc() + '<br>');
+        document.write(add.calc());
+    //
+    let add = {
+        num : 0,
+        calc : function() {
+        
+            document.write(this + ' ')
+            function innerfunc() {
+                this.num += 1;
+                document.write(this + ' ');
+                return this.num
+        } return innerfunc();
+        }
+        };
+        document.write(add.calc() + '<br>');
+        document.write(add.calc());
+    //
+     let add = {
+        num : 0,
+        calc : function() {
+            document.write(this + ' ')
+        
+            thisreference = this;
+            function innerfunc()
+        {
+        
+        thisreference.num += 1;
+        document.write(thisreference + ' ');
+        return thisreference.num;
+                }
+                return innerfunc();
+            }
+        };
+        document.write(add.calc() + '<br>');
+        document.write(add.calc());
+
+    //this with construct invocation
+    let people = function(name, age) {
+            this.name = name;
+            this.age = age;
+            this.displayInfo = function() {
+            document.write(this.name + " is " + this.age + " years old");
+            }
+        }
+        let person1= new people('John', 21);
+        person1.displayInfo();
+
+    //method examples
+    let user = {
+        name: "John",
+        age: 30
+        };
+        user.sayHi = function() {
+        alert("Hello!");
+        };
+        user.sayHi();
+
+    add as a method
+    let user = {
+        name: "John",
+        age: 30
+    };
+    function sayHi() {
+        alert("Hello!");
+    };
+
+    user.sayHi = sayHi;
+    user.sayHi();
+
+    //method shorthand
+    user = {
+        sayHi: function() {
+        alert("Hello");
+        }
+    };
+        
+    user = {
+        sayHi() { 
+        alert("Hello");
+        }
+    };
+
+    //this in methods
+    let user = {
+        name: "John",
+        age: 30,
+        sayHi() {
+
+            alert(this.name);
+
+            }
+        };
+        user.sayHi();
+
+    //error
+    let user = {
+        name: "John",
+        age: 30,
+        sayHi() {
+        alert(user.name); // "user" instead of "this"
+        }
+    };
+    let admin = user;
+    user = null; // overwrite to make things obvious
+    admin.sayHi();
+
+    //this is not bound
+    let user = { name: "John" };
+    let admin = { name: "Admin" };
+    function sayHi() {
+        alert( this.name );
+    }
+    
+    user.f = sayHi;
+    admin.f = sayHi;
+     
+    user.f(); 
+    admin.f(); 
+    admin['f']();
+
+    //calling without an object:this== undefined
+    function sayHi() {
+        alert(this);
+    }
+    sayHi();
+
+    //arrow func 
+    let user = {
+        firstName: "Ilya",
+        sayHi() {
+            let arrow = () => alert(this.firstName);
+            arrow();
+        }
+    };
+    user.sayHi();
+
+ 
+
+
+
+</script>
+
+<body>
+    

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-CSS-Float</title>
+    </head>
+    <body>
+        <script>
+            let introduction=['hello','i','am','sarah'];
+            let greeting=introduction[0];
+            let name=introduction[3];
+            console.log(greeting);
+            console.log(name);
+            
+            //array destructuring
+            let introduction=['hello','i','am','sarah'];
+            let [greeting,pronoun]=introduction;
+            console.log(greeting);
+            console.log(pronoun);
+
+            //declaring variables before assignment
+            let greeting,pronoun
+            [greeting,pronoun]=['hello','i','am','sarah'];
+            console.log(greeting);
+            console.log(pronoun);
+
+            //skipping items in array
+            let[greeting,,,name]=['hello','i','am','sarah'];
+            console.log(greeting);
+            console.log(name);
+
+            //assigning rest of the array
+            let[greeting,...name]=['hello','i','am','sarah'];
+            console.log(greeting);
+            console.log(name);
+            
+            //destructuring assignment with functions
+            function getArray(){
+                return ['hello','i','am','sarah'];
+            }
+            let[greeting,pronoun]=getArray();
+            console.log(greeting);
+            console.log(pronoun);
+
+            //using default values
+            let[greeting='hi',name='sarah']=['hello'];
+            console.log(greeting);
+            console.log(name);
+
+            //swapping values using destructuring
+            let a=6;
+            let b=5;
+            [a,b]=[b,a];
+            console.log(a);
+            console.log(b);
+            
+            //object destructuring
+            let person={name:'sarah',country:'India',job:'developer'};
+            let name=person.name;
+            let country=person.country;
+            let job=person.job;
+            console.log(name);
+            console.log(country);
+            console.log(job);
+
+            //variables declared before assigned
+            let person={name:'sarah',country:'India',job:'Developer'};
+            let name,country,job;
+            ({name,country,job}=person);
+            console.log(name);
+            console.log(job);
+
+            //new variable name
+            let person={name:'sarah',country:'India',job:'Developer'};
+            let{name:foo,job:bar}=person;
+            console.log(foo);
+            console.log(bar);
+
+            //using default values
+            let person={name:'sarah',country:'India',job:'Developer'};
+            let{name="Myname",friend="Annie"}=person;
+            console.log(name);
+            console.log(friend);
+
+            //computed property name
+            let prop='name';
+            let{[prop]:foo}={name:"sarah",country:"India",job:"developer"};
+            console.log(foo);
+
+            //combining arrays with objects
+            let person = {name: "Sarah", country: "Nigeria", friends: ["Annie", "Becky"]};
+            let {name:foo, friends: bar} = person;
+            console.log(foo);
+            console.log(bar);
+
+            //nesting in object destructuring
+            let person={name:'sarah',
+                place:{
+                    country:"Nigeria",
+                    city:"lagos"},
+                    friends:["Annie","Becky"]
+                
+            }
+            let {name:foo,
+                place:{
+                    country:bar,
+                    city:x   }
+            }=person;
+            console.log(foo);
+            console.log(bar);
+
+            //
+            let person = {name: "Sarah", country: "Nigeria", job: "Developer" ,friends: ["Annie","Becky"]};
+            let {name, friends, ...others} = person;
+            console.log(name);
+            console.log(friends);
+            console.log(others);
+
+            //object destructuring
+            function person({name:x,job:y}={}){
+                console.log(x);
+            }
+            person({name: "Michelle"});
+            person();
+            person(friend);
+
+            //nested destructuring
+            const user={
+                id:339,
+                name:'fred',
+                age:42,
+                education:{
+                    degree:'Masters'
+                }
+                
+            };
+            const {education: {degree}} = user;
+            console.log(degree);
+            
+            //example
+            const user = {
+            id: 339,
+            name: 'Fred',
+            age: 42
+            };
+            const {education: {degree}} = user;
+
+            //example
+            const user = {
+                id: 339,
+                name: 'Fred',
+                age: 42
+            };
+            const {education: {degree} = {}} = user;
+            console.log(degree);
+            
+            //example
+            const user = {
+                id: 339,
+                name: 'Fred',
+                age: 42
+            };
+            const {education: {school: {name}} = {}} = user;
+
+            //example
+            const user = {
+                id: 339,
+                name: 'Fred',
+                age: 42
+            };
+            const {education: {school: {name} = {}} = {}} = user;
+            console.log(name);
+
+            //example
+            const user = {
+                id: 339,
+                name: 'Fred',
+                age: 42
+            };
+            const {education: {school: {name}} = {school: {}}} = user;
+            console.log(name);
+            
+            //example
+            const user = {
+                id: 339,
+                name: 'Fred',
+                age: 42
+            };
+            const {education: {school: {name = 'Dunno'} = {}} = {}} = user;
+            console.log(name);
+
+            //example
+            const user = {
+                id: 339,
+                name: 'Fred',
+                age: 42
+            };
+            const {education: {school: {name}} = {school: {name: 'Dunno'}}} = user;
+            console.log(name);
+
+
+
+
+
+        </script>
+        </body>
+        </html>

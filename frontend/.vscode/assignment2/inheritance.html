@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deprecated example</title>
+</head>
+
+<body>
+    <script>
+        function Gods(age,strength){
+            this.age=age;
+            this.strength=strength;
+            this.displayStrength= function(){
+                alert(`the strength is ${this.strength}`);
+
+            }
+        }
+        let someGodOb= new Gods ("huge","extremenly high");
+        function Hero(name,planet){
+            this.name=name;
+            this.planet=planet;
+            this.sayName= function(){
+                alert(this.name);
+
+            }
+        };
+        Hero.prototype= someGodOb;
+        //resetting the constuctor
+        Hero.prototype.constructor=Hero;
+        let supermanOb= new Hero("superman","krypton");
+        supermanOb.displayStrength()
+        alert(supermanOb.age);
+        console.log(supermanOb);
+        console.log(supermanOb.constructor);
+
+    </script>
+</body>
+</html>

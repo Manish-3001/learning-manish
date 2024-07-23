@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deprecated example</title>
+</head>
+
+<body>
+    <script>
+        let students=["manish","sreekar","hrutesh"];
+        console.log(typeof(students));
+        //cobnverting to string
+        let studentsJSON= JSON.stringify(students);
+        console.log(studentsJSON)
+        console.log(typeof(studentsJSON))
+        //converting back to array
+        let convertbackstudent= JSON.parse(studentsJSON);
+        console.log(typeof(convertbackstudent))
+         //let us do manually to convert to string
+        
+         let manualJsonStudents='["manish ","rohit","sumit"]';
+         let convertBackdata= JSON.parse(manualJsonStudents);
+         console.log(typeof(convertBackdata));
+         console.log(convertBackdata[1]);
+
+
+    </script>
+    </body>
+    </html>

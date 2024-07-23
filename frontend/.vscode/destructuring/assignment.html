@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-CSS-Float</title>
+    </head>
+    <body>
+        <script>
+            class Vehicle{
+                displayType(){
+                    console.log('car');
+                }
+            }
+            let vehicle=new Vehicle();
+            console.log(vehicle.displayType=== Vehicle.prototype.displayType);
+            
+            class Vehicle{
+                displayType(){
+                    console.log("running Automatically");
+                }
+                displayType(){
+                    console.log("Car")
+                }
+            
+            }
+            let vehicle=new Vehicle();
+
+            // 
+            let somevariable= class Vehicle{
+                constructor(){
+                    console.log("running automatically")
+                }
+                displayType(){
+                    console.log('Car');
+                }
+            }
+            new somevariable();
+
+            class Vehicle{
+                constructor(){
+                    console.log('start me up');
+                }
+            }
+            class Tesla extends Vehicle{
+
+            }
+            let model3= new Tesla();
+
+            //
+            class Vehicle{
+                constructor(color){
+                    console.log(`the car is ${color}`);
+                }
+            }
+            class Tesla extends Vehicle{
+
+            }
+            let model3=new Tesla("Blue");
+
+            // calling parent constructor using super()
+            class Vehicle{
+                constructor(){
+                    console.log('the base class')
+                }
+            }
+            class tesla extends Vehicle{
+                constructor(){
+                    super();
+                    console.log('the tesla vehicle')
+                }
+            }
+            let model3 =new Tesla();
+
+            //Method override
+            class Vehicle{
+                getPropulsion(){
+                    return 'Gas Powered';
+                }
+            }
+            class Tesla extends Vehicle{
+                getPropulsion(){
+                    return "electric Powered";
+                }
+            }
+            let model3= new Tesla();
+            let poweredby= model3.getPropulsion();
+            console.log(poweredby);
+            
+            //calling super() in a method
+            class Vehicle{
+                getPropulsion(){
+                    return "gas powered";
+                }
+            }
+            class Tesla extends Vehicle{
+                getPropulsion(){
+                    return 'hybrid is'+super.getPropulsion()+'and electric powered';
+                }
+            }
+            let model3= new Tesla();
+            let poweredby= model3.getPropulsion();
+            console.log(poweredby);
+            
+            //properties for class instances
+            class Vehicle{
+                constructor(){
+                    this.kindof='car';
+                }
+            }
+            class Tesla extends Vehicle{
+                constructor(){
+                    super();
+                }
+            }
+            let car=new Tesla();
+            console.log(car.kindof);
+            
+            //accessing this across constructors
+            class vehicle{
+                constructor(){
+                    this.kindof='car';
+                }
+            }
+            class Tesla extends Vehicle{
+                constructor(){
+                    super();
+                    this.kindof="Electric"+this.kindof;
+                }
+            }
+            let car=new Tesla();
+            console.log(car.kindof);
+
+            //static methods
+            class Vehicle{
+                static getDefaultEngine(){
+                    return "Gas";
+                }
+            }
+            let engine= Vehicle.getDefaultEngine();
+            console.log(engine);
+
+            //setters and getters
+            class Square{
+                constructor(width){
+                    this.width=width;
+                }
+                get height(){
+                    return this.width;
+                }
+                set height(height){
+                    this.width=height;
+                    console.log('set a new height of:'+this.height)
+                }
+                get area(){
+                    return this.width * this.height;
+                }
+            }
+            let square = new Square(2);
+            console.log('getting the height:'+square.height);
+            console.log('getting the area:'+square.area);
+            square.height = 5;
+            console.log('getting the height:'+square.height);
+            console.log('getting the area:'+square.area);
+            square.height = 8;
+            console.log('getting the height:'+square.height);
+            console.log('getting the area:'+square.area);
+
+            //classes as first class citizens
+            class Vehicle{
+                constructor(){
+                    console.log('moving forward');
+                }
+            }
+            function move(){
+                console.log('finished moving');
+            }
+            move(new Vehicle());
+
+            //
+            function move(){
+                console.log('finished moving');
+            }
+            move(new class{
+                constructor(){
+                    console.log('moving forward');
+                }
+            });
+
+
+
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>on click and double click example</title>
+</head>
+
+<body>
+    <div id="container">click here
+
+</div>
+<button ondblclick="removeEvent()">remove event</button>
+<script type="text/javascript" >
+    let ref=document.getElementById("container");
+    ref.addEventListener("dblclick",showMsgOne);
+    ref.addEventListener("dblclick",showMsgTwo);
+    function showMsgOne(){
+        alert("this is 1st msg")
+    }
+    function showMsgTwo(){
+        alert("this is 2nd msg");
+    }
+    function removeEvent(){
+        ref.removeEventListener("dblclick",showMsgOne);
+    }
+    
+
+</script>
+</body>
+</html>
+

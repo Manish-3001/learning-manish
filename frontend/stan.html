@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>javascript</title>
+</head>
+<body>
+    <script >
+        // (function(name,location){
+        //     alert('hello is'+name+'and location is'+location);
+        // }('smith','bangalore'));
+        // inner function
+        // function outerFunc(param){
+        //     function innerFunc(input){
+        //         return input*4;
+        //     }
+        //     return 'the result is'+innerFunc(param)
+        // }
+        // outerFunc(12);
+
+        // function test(){
+        //     alert('inside test');
+        //     return function(){
+        //         alert('inside returned function');
+        //     };
+        // }
+        // var newFunc=test();
+        // newFunc();
+
+    //closure
+//     function makeFunc() {
+//   const name = "Mozilla";
+//   function displayName() {
+//     console.log(name);
+//   }
+//   return displayName;
+// }
+
+// const myFunc = makeFunc();
+// myFunc();
+        // closure example 2
+        function outerFunc(param){
+            var privateVar=5;
+            var innerFunc= function(input){
+                alert('param passed to a function is'+param+'and private variable is'+privateVar);
+                var sum= privateVar+input+param;
+                alert('addition of private var and input and param is'+sum);
+            }
+            return innerFunc;
+        }
+        var closureFunc= outerFunc(12);
+        closureFunc(4);2
+
+    </script>
+</body>
+</html>

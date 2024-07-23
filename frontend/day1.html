@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Deprecated example</title>
+</head>
+
+<body>
+    <figure>
+        <div id="img">
+        <img src="nandi.jpg" alt="nandihills"/>
+    </div>
+        <figcaption>nandi hills</figcaption>
+    </figure>
+  <header>
+    <nav>
+      <div id="menu">
+           <a href='/home.html'>home</a>
+    	   <a href='/about.html'>about</a>
+    	   <a href='/contact.html'>contact</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id ="top-news">
+      <article id ="rain-div">
+        <h1> Heavy rain in Bangalore</h1>
+        <div>
+          heavy rain in Bangalore. most areas affected.
+          <footer>By Author:Manish</footer>
+        </div>
+      </article>
+      <article>
+        <h1> Bangalore has many job opportunities</h1>
+        <div>
+          heavy rain in Bangalore. most areas affected.
+          <footer>By Author:Manish</footer>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <header>footer</header>
+    <nav id="menu">
+        <a href="/policy.html">Policy</a>
+        <a href="/privacy.html">Privacy</a>
+    </nav>
+  </footer>
+  <script>
+    //id's
+    let articleOb =document.getElementById("rain-div");
+    articleOb.style.color="red";
+    articleOb.style.border="4px solid green";
+    articleOb.onclick= function(){
+        alert("did u click me?");
+
+    }
+    articleOb.textContent= "what ,, every text gone?"
+    articleOb.style.marginLeft="100px"
+  </script>
+  
+</body>
+</html>

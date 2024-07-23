@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>forin example</title>
+  <style>
+    #one,#two,#three,main{
+      border: 4px solid blue;
+      padding: 15px ;
+      margin: 4px ;
+
+    }
+    main{
+      border-color: green;
+
+
+    }
+    #one{
+      float: left;
+      width:29%;
+    }
+    #two{
+      float: left;
+      width:28%;
+    }
+    #three{
+      float: left;
+      width:31%;
+
+    }
+    .clearfix:after{
+      content:"";
+      display:table;
+      clear:both;
+    }
+    
+  </style>
+</head>
+
+<body>
+      <main class="clearfix">
+        <div id="one">
+          div one
+        </div>
+        <div id="two">
+          div two
+        </div>
+        <div id="three">
+          div three
+        </div>
+
+
+      </main>
+
+
+  </body>
+  </html>
