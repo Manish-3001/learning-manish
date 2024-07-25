@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>prototype example</title>
+</head>
+
+<body>
+    <script>
+        function log(num){
+            if(num > 5){
+                return;
+            }
+            console.log(num);
+            log(num + 1);
+        }
+        log(1);
+        //
+        function randomUntilFive(result = 0, count = 0){
+            if(result === 5){
+                console.log(`The random result: ${result}`);
+                console.log(`How many times random is executed: ${count}`);
+                return;
+            }
+            result = Math.floor(Math.random() * (10 - 1 + 1) + 1);
+            count++;
+            randomUntilFive(result, count);
+        }
+        randomUntilFive();
+        //
+        let result = 0;
+        let count = 0;
+        while (result !== 5) {
+            result = Math.floor(Math.random() * (10 - 1 + 1) + 1);
+            count++;
+        }
+        console.log(`The random result: ${result}`);
+        console.log(`How many times random is executed: ${count}`);
+        //
+        function randomUntilFive(result = 0, count = 0){
+            if(result === 5){
+                console.log(`The random result: ${result}`);
+                console.log(`How many times random is executed: ${count}`);
+                return;
+            }
+        }
+        randomUntilFive(5);
+        //
+        function randomUntilFive(result = 0, count = 0){
+
+            if(result === 5){
+                console.log(`The random result: ${result}`);
+                console.log(`How many times random is executed: ${count}`);
+                return;
+            }
+            result = Math.floor(Math.random() * (10 - 1 + 1) + 1);
+            count++;
+            randomUntilFive(result, count);
+        }
+        randomUntilFive(4);
+        //
+        function factorial(num){
+        if(num === 1){
+            return num;
+            }
+        }
+        console.log(factorial(1));
+    </script>
+    </body>
+    </html>
