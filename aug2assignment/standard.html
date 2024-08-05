@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let firstName = "manish";
+        let lastName = "rathod";
+        let productPrice = 19.90;
+        let taxRate = 0.20;
+        let finalPrice = productPrice + (productPrice * taxRate);
+        console.log("Total Price:", finalPrice);
+
+        let num1 = 5;
+        let num2 = 10;
+        let sum = num1 + num2;
+        console.log("Sum of num1 and num2:", sum);
+
+        const carBrands = ["Volvo", "Saab", "Fiat"];
+        console.log("Car brands:", carBrands);
+
+        function toCelsius(fahrenheit) {
+          return (5 / 9) * (fahrenheit - 32);
+        }
+
+        let currentHour = 18;
+        let message;
+        if (currentHour < 20) {
+          message = "Good day";
+        } else {
+          message = "Good evening";
+        }
+        console.log("Greeting:", message);
+
+        const person = {
+          firstName: "manish",
+          lastName: "rathod",
+          age: 50,
+          eyeColor: "blue"
+        };
+        console.log("User Info:", person);
+
+        function increment() {
+          let localVariable = 10;
+          localVariable += 5;
+          console.log("Local Variable after addition:", localVariable);
+        }
+        increment();
+
+        const vehicle = { type: "Fiat", model: "500", color: "white" };
+        console.log("Vehicle Info:", vehicle);
+
+        let greetingText = "Hello";
+        let count = 5;
+        console.log("Greeting Text:", greetingText);
+        console.log("Count:", count);
+
+        let comparison = (0 === "");
+        console.log("Comparison of 0 === '':", comparison);
+
+        function calculateFinalPrice(price, discount = 0) {
+          return price - (price * discount);
+        }
+        console.log("Discounted Price:", calculateFinalPrice(100, 0.15));
+
+        let weekDay = "Sunday";
+        switch (weekDay) {
+          case "Monday":
+            console.log("Start of the work week");
+            break;
+          case "Tuesday":
+            console.log("Second day of the work week");
+            break;
+          default:
+            console.log("Invalid day");
+        }
+
+        let calculationResult = Number("5") + 3;
+        console.log("Result of Number('5') + 3:", calculationResult);
+    </script>
+    
+</body>
+</html>
